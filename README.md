@@ -2,7 +2,7 @@
 
 Requirements
 ------------
-Be careful to change your Srrdb IDs before docker build or you will need to edit /app/pyautorescene-master/bin/autorescene.py manualy inside the docker and run python3 setup.py install again. Compressed RARs will doesn't work with this tool. You need to run my fork pyautorescene script under Windows.
+Be careful to change your Srrdb IDs before docker build or you will need to edit /app/pyautorescene-master/bin/autorescene.py manualy inside the docker and run python3 setup.py install again. Compressed RARs will doesn't work with this tool. You need to run my fork [pyautorescene](https://github.com/jaloji/pyautorescene) script under Windows.
 
 Installation
 -----
