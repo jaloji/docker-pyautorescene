@@ -26,7 +26,7 @@ You can uncomment this line in the Dockerfile if you just want a single use or y
 ```
 Or you can leave it like that and do this command to use it as the inital script:
 ```
-docker exec -ti docker-pyautorescene /bin/sh
+docker exec -ti docker-pyautorescene /bin/bash
 ```
 
 WinRAR binaries seem to not being compatible with Alpine:
