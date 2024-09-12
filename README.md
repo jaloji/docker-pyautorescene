@@ -2,7 +2,7 @@
 
 Requirements
 ------------
-Be careful to change your Srrdb IDs before docker build or you will need to edit /app/pyautorescene-master/bin/autorescene.py manualy inside the docker and run python3 setup.py install again. Compressed RARs will doesn't work with this tool. You need to run my fork [pyautorescene](https://github.com/jaloji/pyautorescene) script under Windows.
+Be careful to change your Srrdb IDs before docker build or you will need to edit /app/pyautorescene-master/utils/res.py manualy inside the docker and run python3 setup.py install again. Compressed RARs will doesn't work with this tool. You need to run my fork [pyautorescene](https://github.com/jaloji/pyautorescene) script under Windows.
 
 Installation
 -----
@@ -22,7 +22,7 @@ Be careful about UID/GID you must use a machine user with read/write rights on d
 
 You can uncomment this line in the Dockerfile if you just want a single use or you can put other parameters.
 ```
-#CMD autorescene.py -va --find-sample -o /output/ /input/
+#CMD autorescene.py -vaf -o /output/ /input/
 ```
 Or you can leave it like that and do this command to use it as the inital script:
 ```
