@@ -17,15 +17,15 @@ RUN dpkg --add-architecture i386 && \
         python3.9-distutils \
         python3.9-venv \
         python3-pip \
-	# We need 32 bit binaries for some RAR version 
+        # We need 32 bit binaries for some RAR version 
         libc6-i386 \
-	libstdc++5 \
-	libstdc++5:i386 \
+        libstdc++5 \
+        libstdc++5:i386 \
         lib32stdc++6 \
         lib32z1 \
         lib32ncurses6 \
-	# We need this for srs .NET 1.2 
-	mono-complete \
+        # We need this for srs .NET 1.2 
+        mono-complete \
         && \
     apt-get clean && \
     # We need this for very old RAR version 
@@ -59,13 +59,12 @@ RUN USER="" && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /app/unrarsrc-7.0.9.tar.gz /app/unrar  && \
     # 2 - Set up pyrescene
-    # wget https://github.com/srrDB/pyrescene/archive/refs/heads/master.zip && \
-    wget https://github.com/srrDB/pyrescene/archive/refs/heads/bugfix/issue-19.zip && \
-    unzip issue-19.zip && \
-    cd pyrescene-bugfix-issue-19 && \
+    wget https://github.com/srrDB/pyrescene/archive/refs/heads/master.zip && \
+    unzip master.zip && \
+    cd pyrescene-master && \
     python3 setup.py install && \
     cd .. && \
-    rm -rf issue-19.zip && \
+    rm -rf master.zip && \
     # 3 - Set up rarlinux
     wget https://github.com/jaloji/rarlinux/archive/refs/heads/master.zip && \
     unzip -o master.zip && \
