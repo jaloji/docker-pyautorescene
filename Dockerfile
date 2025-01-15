@@ -95,3 +95,6 @@ WORKDIR /input
 
 # Uncomment for single use
 #CMD ["autorescene.py", "-vaf", "-o", "/output/", "/input/"]
+
+# Or
+#CMD ["srrup.py", "/srr"]
