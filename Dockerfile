@@ -33,7 +33,7 @@ RUN dpkg --add-architecture i386 && \
     dpkg -i libstdc++2.10-glibc2.2_2.95.4-27_i386.deb && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf libstdc++2.10-glibc2.2_2.95.4-27_i386.deb && \
-    mkdir -p /app /app/rarv /app/rarv/tmp /input /output
+    mkdir -p /app /app/rarv /app/rarv/tmp /input /output /srr
 
 WORKDIR /app
 
@@ -69,7 +69,7 @@ RUN USER="" && \
     wget https://github.com/jaloji/rarlinux/archive/refs/heads/master.zip && \
     unzip -o master.zip && \
     # More version avaiblable with x86
-    python3 /app/pyrescene-bugfix-issue-19/bin/preprardir.py -b /app/rarlinux-master/x86 /app/rarv/ && \
+    python3 /app/pyrescene-masetr/bin/preprardir.py -b /app/rarlinux-master/x86 /app/rarv/ && \
     rm -rf master.zip && \
     # 4 - Set up pyautorescene
     wget https://github.com/jaloji/pyautorescene/archive/refs/heads/master.zip && \
