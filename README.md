@@ -24,6 +24,10 @@ You can uncomment this line in the Dockerfile if you just want a single use or y
 ```
 #CMD autorescene.py -vaf -o /output/ /input/
 ```
+Or since pyautorescene have upload script.
+```
+#CMD ["srrup.py", "/srr"]
+```
 Or you can leave it like that and do this command to use it as the inital script:
 ```
 docker exec -ti docker-pyautorescene /bin/bash
